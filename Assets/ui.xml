@@ -1,0 +1,45 @@
+<vbox width="100%" height="100%" style="padding: 5px;">
+    <style>
+        Label {
+            color: black;
+        }
+        .sectionHeading text {
+            font-size: 14;
+            font-weight:bold;
+        }
+        Label.parameterTitle {
+            font-size: 12;
+        }
+        .controlBox, .hudKeyBox {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #ffffff;
+        }
+    </style>
+    <hbox width="100%" height="100%">
+        <vbox height="100%">
+            <vbox styleName="hudKeyBox">
+                <label id="hudKeyMessage" text="Hit H to toggle HUD"></label>
+            </vbox>
+        </vbox>
+        <vbox id="centerContent" width="100%">
+            <!-- Blank section to force left and right columns apart -->
+        </vbox>
+        <vbox id="controls" styleName="controlBox" height="100%" style="background-color: #ffffff;">
+            <vbox>
+                <label text="3-component Phong lighting" />
+                <vbox id="complexLighting" width="100%" height="200px">
+                    <frame text="Complex Lighting" styleName="parameterTitle">
+                        <vbox>
+                            <vbox>
+                                <label text="Ambient" styleName="parameterTitle"></label>
+                                <color-picker-popup id="lightAmbient" value="0x191919"></color-picker-popup>
+                            </vbox>
+                        </vbox>
+                    </frame>
+                </vbox>
+            </vbox>
+        </vbox>
+    </hbox>
+</vbox>
